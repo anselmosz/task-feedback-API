@@ -15,6 +15,9 @@ export const dbConfig = {
   port: process.env.DB_PORT,
   name: process.env.DB_NAME,
   user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
+  password: process.env.DB_PASSWORD
+}
+
+export const jwtConfig = {
   jwtSecret: process.env.JWT_SECRET
 }
