@@ -1,35 +1,3 @@
-Seu README já tem **boas informações**, mas ele está mais parecido com **anotações de desenvolvimento** do que com a documentação de um projeto público. A melhoria principal é:
-
-* dar **contexto do produto**
-* separar **o que já existe vs o que virá**
-* organizar **rotas por módulo**
-* deixar claro **como rodar o projeto**
-
-Vou sugerir uma estrutura que é **comum em projetos backend profissionais** e também muito boa para **portfólio**.
-
----
-
-# Estrutura recomendada do README
-
-```
-1. Nome do Projeto
-2. Descrição do Projeto
-3. Objetivo do Sistema
-4. Funcionalidades Atuais
-5. Funcionalidades Planejadas
-6. Arquitetura do Projeto
-7. Tecnologias Utilizadas
-8. Estrutura de Pastas
-9. Endpoints da API
-10. Como executar o projeto
-```
-
-Vou reorganizar seu conteúdo dentro dessa estrutura.
-
----
-
-# Exemplo reorganizado do README
-
 ## 📌 Task Feedback API
 
 Backend de um micro-SaaS para **coleta e análise de feedback de clientes** através de pesquisas personalizadas.
