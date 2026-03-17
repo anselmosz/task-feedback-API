@@ -9,4 +9,8 @@ export default {
   listarPesquisas: (accountId) => {
     return database.select().from("surveys").where({account_id: accountId});
   },
+
+  buscarPesquisaPorId: (accountId, surveyId) => {
+    return database.select().from("surveys").where({account_id: accountId, survey_id: surveyId});
+  },
 }

@@ -13,4 +13,10 @@ export default {
 
     return res.status(200).json({surveys: pesquisas});
   }),
+
+  buscarPesquisaPorId: asyncHandler(async (req, res) => {
+    const pesquisa = await surveysService.buscarPesquisaPorId(req.user.accountId, req.params.id);
+
+    return res.status(200).json({survey: pesquisa});
+  }),
 }

@@ -25,4 +25,13 @@ export default {
 
     return pesquisas;
   },
+
+  buscarPesquisaPorId: async(accountId, surveyId) => {
+    if (!accountId) throw new AppError("Conta não informada", 400);
+
+    const pesquisa = await surveysRepository.buscarPesquisaPorId(accountId, surveyId);
+    if (!pesquisa || pesquisa.length === 0) throw new AppError("Pesquisa não encontradas", 404);
+
+    return pesquisa;
+  }
 }

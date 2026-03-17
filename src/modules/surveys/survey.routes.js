@@ -5,6 +5,7 @@ import { decodeToken, adminOnly } from "../../middlewares/auth.middleware.js"
 const router = Router();
 
 router.post("/", decodeToken, adminOnly, surveysController.criarPesquisa);
-router.get("/", decodeToken, adminOnly, surveysController.listarPesquisas);
+router.get("/", decodeToken, surveysController.listarPesquisas);
+router.get("/:id", decodeToken, surveysController.buscarPesquisaPorId);
 
 export default router;
