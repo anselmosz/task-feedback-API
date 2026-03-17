@@ -31,10 +31,13 @@ CREATE TABLE users (
 
   role ENUM('admin','member') DEFAULT 'member',
 
-  user_status ENUM('active', 'inactive','blocked') DEFAULT 'active',
+  user_status ENUM('active', 'inactive') DEFAULT 'active',
 
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  login_attempts INT DEFAULT 0,
+  last_login_at DATETIME NULL,
+  locked_until DATETIME NULL,
 
   UNIQUE(email),
 
