@@ -20,12 +20,12 @@ export const decodeToken = (req, res, next) => {
 
 export const adminOnly = (req, res, next) => {
   // verifica se o campo "acesso" do token contém admin para liberar o acesso
-  if (req.user.role !== "admin") return res.status(403).json({message: "Acesso negado"});
+  if (req.user.role !== "admin") return res.status(403).json({message: "Acesso negado, somente administradores podem realizar esta ação"});
   next();
 };
 
 // Verifica o usuário e o seu nível de acesso
-export const validateIsTheAdminOrUse = (req, res, next) => {
+export const validateIsTheAdminOrUser = (req, res, next) => {
   const {userId, role} = req.user;
   const idParam = Number(req.params.id);
 
