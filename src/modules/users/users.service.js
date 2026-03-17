@@ -75,7 +75,9 @@ export default {
     return resultado;
   },
 
-  ativarUsuario: async(userId, accountId) => {
+  ativarUsuario: async(userId, accountId, userIdLogged) => {
+    if (userId == userIdLogged) throw new AppError("Você não pode inativar seu perfil", 400);
+
     const resultado = await usersRepository.ativarUsuario(userId, accountId);
     
     if (!resultado) throw new AppError("Usuario não encontrado!", 404);
@@ -83,7 +85,9 @@ export default {
     return resultado;
   },
 
-  desativarUsuario: async(userId, accountId) => {
+  desativarUsuario: async(userId, accountId, userIdLogged) => {
+    if (userId == userIdLogged) throw new AppError("Você não pode inativar seu perfil", 400);
+
     const resultado = await usersRepository.desativarUsuario(userId, accountId);
 
     if (!resultado) throw new AppError("Usuario não encontrado!", 404);

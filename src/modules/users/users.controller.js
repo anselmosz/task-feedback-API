@@ -33,13 +33,13 @@ export default {
   }),
 
   ativarUsuario: asyncHandler(async (req, res) => {
-    await usersService.ativarUsuario(req.params.id, req.user.accountId);
+    await usersService.ativarUsuario(req.params.id, req.user.accountId, req.user.userId);
 
     return res.status(200).json({message: "Usuário ativado"});
   }),
   
   desativarUsuario: asyncHandler(async (req, res) => {
-    await usersService.desativarUsuario(req.params.id, req.user.accountId);
+    await usersService.desativarUsuario(req.params.id, req.user.accountId, req.user.userId);
 
     return res.status(200).json({message: "Usuário desativado"});
   })
