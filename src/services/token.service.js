@@ -10,7 +10,7 @@ export const gerarToken = (data) => {
     },
   
     jwtConfig.jwtSecret,
-    { expiresIn: "1h" }
+    { expiresIn: jwtConfig.jwtExpiresIn }
   );
 
   return token;
