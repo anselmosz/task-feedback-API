@@ -35,6 +35,8 @@ CREATE TABLE users (
 
   created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  
+  must_change_password BOOLEAN DEFAULT true,
   login_attempts INT DEFAULT 0,
   last_login_at DATETIME NULL,
   locked_until DATETIME NULL,
